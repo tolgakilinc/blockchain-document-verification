@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Blockchain Belge Doğrulama</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dropzone-box">
+    <div class="dropzone-box__header">
+      <h2>Belge Doğrulama</h2>
+      <button class="close" id="close-btn">X</button>
+    </div>
+
+    <div class="dropzone-area">
+      <label for="upload-file" class="file-upload-icon">📄</label>
+      <input type="file" id="upload-file" accept=".pdf,.doc,.docx,.csv,.xls,.xlsx">
+      <div class="file-info">Dosya seçilmedi</div>
+    </div>
+
+    <div class="dropzone-actions">
+      <button type="reset" id="reset-btn">Temizle</button>
+      <button type="submit" id="submit-button">Doğrula</button>
+      <button type="button" id="save-button">Kaydet</button>
+
+    </div>
+
+    <div id="result-box" style="margin-top: 20px; display: none; border: 1px solid #ccc; padding: 10px;">
+    <h3>Sonuç</h3>
+    <p><strong>Belge Hash:</strong> <span id="result-hash"></span></p>
+    <p><strong>Belge Türü:</strong> <span id="result-docType"></span></p>
+    <p><strong>Yükleyen:</strong> <span id="result-issuer"></span></p>
+    <p><strong>Zaman Damgası:</strong> <span id="result-timestamp"></span></p>
+  </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

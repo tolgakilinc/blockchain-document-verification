@@ -1,0 +1,103 @@
+body {
+  background-color: #f3f3f3;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 1rem; 
+  box-sizing: border-box;
+}
+
+html {
+    zoom: 100% !important;
+}
+
+.dropzone-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%; /* burada önemli */
+  max-width: 400px; /* masaüstü için sınır */
+  box-sizing: border-box; /* padding dahil olsun */
+  margin: 1rem; /* mobilde yanlardan boşluk */
+}
+
+.dropzone-box__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropzone-area {
+  border: 2px dashed #6b6bff;
+  padding: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.dropzone-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  flex-wrap: wrap; 
+  gap: 0.5rem; 
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #6b6bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  flex: 1; 
+  min-width: 100px; 
+}
+
+button:hover {
+  background-color: #4b4bcf;
+}
+
+.file-info {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  word-break: break-word; 
+  overflow-wrap: break-word;
+}
+
+.close {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+#result-box {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #fafafa;
+  font-size: 0.9rem;
+  word-break: break-word;
+}
+
+#result-box p span {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: block;
+  color: #333;
+  font-size: 0.9em;
+}
+
+@media (max-width: 480px) {
+  .dropzone-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

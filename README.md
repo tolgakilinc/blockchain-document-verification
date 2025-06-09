@@ -34,4 +34,9 @@ npm install -g truffle
 # Compile and deploy contracts
 truffle compile
 truffle migrate --reset --network development
+```
+## 📸 Mobile View
+![iPhone-13-PRO-127 0 0 1 (1)](https://github.com/user-attachments/assets/b65d02d8-3388-4746-b60b-6645f6155030)
+
+
 

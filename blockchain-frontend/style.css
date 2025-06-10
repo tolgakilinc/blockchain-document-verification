@@ -18,10 +18,10 @@ html {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  width: 100%; /* burada önemli */
-  max-width: 400px; /* masaüstü için sınır */
-  box-sizing: border-box; /* padding dahil olsun */
-  margin: 1rem; /* mobilde yanlardan boşluk */
+  width: 100%; 
+  max-width: 400px; 
+  box-sizing: border-box; 
+  margin: 1rem; 
 }
 
 .dropzone-box__header {

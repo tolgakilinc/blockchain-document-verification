@@ -6,7 +6,7 @@ const web3 = new Web3(window.ethereum);
 
 // Contract yükleyici fonksiyon (otomatik abi + address alır)
 async function loadContract() {
-  const response = await fetch("DocumentVerifier.json"); // Buraya kopyaladığın json dosyası
+  const response = await fetch("DocumentVerifier.json"); 
   const contractJson = await response.json();
 
   const abi = contractJson.abi;
@@ -46,7 +46,6 @@ document.getElementById("submit-button").addEventListener("click", async () => {
     try {
       const result = await contract.methods.verifyDocumentHash(hash).call();
 
-      // Sonuçları ekranda göster
       document.getElementById("result-box").style.display = "block";
       document.getElementById("result-hash").innerText = hash;
       document.getElementById("result-docType").innerText = result[0];
@@ -56,7 +55,6 @@ document.getElementById("submit-button").addEventListener("click", async () => {
     } catch (e) {
       alert("❌ Belge blockchain'de kayıtlı değil.");
 
-      // Sonuç kutusunu gizle
       document.getElementById("result-box").style.display = "none";
     }
   } else {
@@ -100,7 +98,6 @@ async function getFileHash(file) {
   // Dosya içeriğini oku
   const buffer = await file.arrayBuffer();
 
-  // Metadata hazırla (örneğin dosya adı, boyutu, son değiştirilme tarihi)
   const metadataString = `${file.name}-${file.size}-${file.lastModified}`;
   const encoder = new TextEncoder();
   const metadataBuffer = encoder.encode(metadataString);
